@@ -240,7 +240,7 @@ export default function SettlementDashboard({ worldId }: { worldId: Id<'worlds'>
 
       {/* Game View Experiment */}
       <section>
-        <GameView />
+        <GameView worldId={worldId} />
       </section>
     </div>
   );
