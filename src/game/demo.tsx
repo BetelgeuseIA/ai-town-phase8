@@ -11,7 +11,7 @@ import { GameViewController } from './GameViewController';
 function App() {
   return (
     <div className="w-full h-screen bg-gray-900">
-      <GameViewController />
+      <GameViewController worldId="demo" />
     </div>
   );
 }

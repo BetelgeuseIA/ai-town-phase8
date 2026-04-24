@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { GameEngine } from './GameEngine';
 
 interface GameViewProps {
+  worldId?: string;
   width?: number;
   height?: number;
 }
