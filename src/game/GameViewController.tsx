@@ -22,6 +22,10 @@ import { notificationQueue } from './ui/NotificationQueue';
 // TIPOS
 // ============================================================================
 
+interface GameViewControllerProps {
+  worldId: string;
+}
+
 interface GameState {
   /** Agente seleccionado actualmente */
   selectedAgent: string | null;
@@ -37,7 +41,7 @@ interface GameState {
 // COMPONENTE PRINCIPAL
 // ============================================================================
 
-export const GameViewController: React.FC = () => {
+export const GameViewController: React.FC<GameViewControllerProps> = ({ worldId }) => {
   // Estado del juego
   const [gameState, setGameState] = useState<GameState>({
     selectedAgent: null,

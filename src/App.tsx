@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useQuery } from 'convex/react';
 import { api } from '../convex/_generated/api';
 import SettlementDashboard from './components/dashboard/SettlementDashboard.tsx';
-import GameViewController from './game/GameViewController.tsx';
+import { GameViewController } from './game/GameViewController.tsx';
 
 export default function Home() {
   const worldStatus = useQuery(api.world.defaultWorldStatus);
