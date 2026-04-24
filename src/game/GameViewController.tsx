@@ -26,7 +26,7 @@ interface GameViewControllerProps {
   worldId: string;
 }
 
-interface GameState {
+export interface GameState {
   /** Agente seleccionado actualmente */
   selectedAgent: string | null;
   /** Posición de la cámara */
