@@ -215,4 +215,3 @@ export const GameViewController: React.FC<GameViewControllerProps> = ({ worldId 
   );
 };
 
-export default GameViewController;
