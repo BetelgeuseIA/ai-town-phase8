@@ -1,5 +1,5 @@
-import { GameCore } from './game/GameCore';
+import { GameViewController } from './game/GameViewController.tsx';
 
 export default function Home() {
-  return <GameCore />;
+  return <GameViewController worldId="demo" />;
 }
