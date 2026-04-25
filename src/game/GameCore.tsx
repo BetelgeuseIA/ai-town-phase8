@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { WeatherSystem } from './weather/WeatherSystem';
 import { CharacterTraits } from './characters/CharacterTraits';
-import { EconomyManager } from './economy/EconomyManager';
+import { EconomyManager, ResourceType } from './economy/EconomyManager';
 import { CombatSystem } from './combat/CombatSystem';
 import { QuestSystem } from './quests/QuestSystem';
 import { AchievementSystem } from './achievements/AchievementSystem';
@@ -40,7 +40,7 @@ export const GameCore: React.FC = () => {
   }, [weather, economy, quests, achievements]);
 
   // FUNCIONES INTERACTIVAS
-  const buyResource = (resource: any) => {
+  const buyResource = (resource: ResourceType) => {
     const result = economy.buy(resource, 10, 'player');
     if (result) {
       console.log('Compra exitosa:', result);
