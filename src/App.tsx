@@ -1,5 +1,5 @@
-import Game from './components/Game.tsx';
+import { GameCore } from './game/GameCore';
 
 export default function Home() {
-  return <Game />;
+  return <GameCore />;
 }
