@@ -4,7 +4,22 @@
  * Afecta visibilidad y mood de los agentes
  */
 
-import { EventEmitter } from 'events';
+// Simple EventEmitter replacement for browser
+class EventEmitter {
+  private events: Record<string, Function[]> = {};
+  
+  on(event: string, listener: Function) {
+    if (!this.events[event]) {
+      this.events[event] = [];
+    }
+    this.events[event].push(listener);
+  }
+  
+  emit(event: string, ...args: any[]) {
+    if (!this.events[event]) return;
+    this.events[event].forEach(listener => listener(...args));
+  }
+}
 
 export type WeatherType = 'sunny' | 'cloudy' | 'rainy' | 'stormy';
 

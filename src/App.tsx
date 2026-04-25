@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useQuery } from 'convex/react';
 import { api } from '../convex/_generated/api';
 import SettlementDashboard from './components/dashboard/SettlementDashboard.tsx';
-import { GameViewController } from './game/GameViewController.tsx';
+import { GameCore } from './game/GameCore';
 
 export default function Home() {
   const worldStatus = useQuery(api.world.defaultWorldStatus);
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div style={{ minHeight: '100vh', background: '#0f0f23' }}>
       {worldId ? (
-        <GameViewController worldId={worldId} />
+        <GameCore />
       ) : worldStatus === undefined ? (
         <div style={{
           padding: 40,
